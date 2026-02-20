@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Eyes Store</title>
+</head>
+
+<body>
+    <h1>SQUARE EYES</h1>
+    
+    <!-- Genre -->
+     <label for="genreFilter">Filter by Genre:</label>
+     <select id="genreFilter">
+        <option value="all">All Genres</option>
+     </select>
+
+     <!-- Loader -->
+      <div id="loader" hidden>
+        <p>Loading...</p>
+        </div>
+
+    <!-- Error message -->
+     <p id="errorMessage" hidden></p>
+
+     <!-- Product container -->
+      <div id="productGrid"></div>
+
+      <script type="module" src="./js/pages/home.js"></script>
+</body>
+</html>

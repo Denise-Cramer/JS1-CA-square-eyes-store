@@ -1,6 +1,6 @@
-import { fetchJson } from "..api/client.js";
-import { qs, showElement, hideElement, setText } from "..utils/dom.js";
-import { formatPrice } from "..utils/format.js";
+import { fetchJson } from "../api/client.js";
+import { qs, showElement, hideElement, setText } from "../utils/dom.js";
+import { formatPrice } from "../utils/format.js";
 
 var BASE_URL = 'https://v2.api.noroff.dev';
 

@@ -21,6 +21,7 @@ function calculateTotal(cart) {
     }
 
     return total;
+}
 
     function renderCart() {
         var cart = getCart();
@@ -82,7 +83,6 @@ function calculateTotal(cart) {
             }
         });
     }
-}
 
 checkoutButton.addEventListener("click", function() {
     clearCart();

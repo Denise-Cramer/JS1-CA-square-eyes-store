@@ -21,7 +21,7 @@ export function addToCart(product) {
 // Remove from cart by index
 export function removeFromCart(index) {
     var cart = getCart();
-    cart.splice(index, 1);
+    cart.splice(index, 1);      //remove only one item at the specified index
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 

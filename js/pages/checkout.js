@@ -2,8 +2,6 @@ import { qs, setText, showElement, hideElement } from "../utils/dom.js";
 import { formatPrice } from "../utils/format.js";
 import {getCart, removeFromCart, clearCart } from "../state/cart.js";
 
-var BASE_URL = "https://v2.api.noroff.dev";
-
 var cartItemsContainer = qs("#cartItems");
 var totalPriceElement = qs("#totalPrice");
 var emptyMessage = qs("#emptyMessage");
@@ -60,12 +58,13 @@ function calculateTotal(cart) {
             item.className = "cart-item";
 
             item.innerHTML = `
-            <img src="$imageUrl}" alt="${imageAlt}"> style="max-width:120px;">
+            <img src="${imageUrl}" alt="${imageAlt}" style="max-width:120px;">
             <h2>${product.title}</h2>
             <p>${formatPrice(priceToUse)}</p>
             <button type="button" data-index="${i}">Remove</button>
             <hr>
             `;
+
             cartItemsContainer.appendChild(item);
         }
 

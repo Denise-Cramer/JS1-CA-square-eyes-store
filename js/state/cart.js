@@ -17,3 +17,15 @@ export function addToCart(product) {
 
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
+
+// Remove from cart by index
+export function removeFromCart(index) {
+    var cart = getCart();
+    cart.splice(index, 1);
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+//Clear entire cart
+export function clearCart() {
+    localStorage.setItem(CART_KEY, JSON.stringify([]));
+}

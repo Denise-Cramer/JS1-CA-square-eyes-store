@@ -6,7 +6,7 @@ import {addToCart} from "../state/cart.js";
 var BASE_URL = "https://v2.api.noroff.dev";
 
 var loader = qs("#loader");
-var error = qs("#error");
+var errorMessage = qs("#error");
 var container = qs("#productContainer");
 
 //Read ID from URL

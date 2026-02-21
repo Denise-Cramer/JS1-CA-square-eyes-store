@@ -3,16 +3,16 @@ import {qs, showElement, hideElement, setText} from "../utils/dom.js";
 import { formatPrice } from "../utils/format.js";
 import {addToCart} from "../state/cart.js";
 
-var BASE_URL = 'https://v2.api.noroff.dev';
+var BASE_URL = "https://v2.api.noroff.dev";
 
-var loader = qs('#loader');
-var error = qs('#error');
-var container = qs('#productContainer');
+var loader = qs("#loader");
+var error = qs("#error");
+var container = qs("#productContainer");
 
 //Read ID from URL
 function getProductId() {
     var params = new URLSearchParams(window.location.search);
-    return params.get('id');
+    return params.get("id");
 }
 
 //Render product details on the page
@@ -42,13 +42,13 @@ function renderProduct(product) {
     <p><strong>Released:</strong> ${product.released}</p>
     <p><strong>Price:</strong> ${formatPrice(priceToUse)}</p>
 
-    button id="addToCartButton">Add to Cart</button>
+    <button id="addToCartButton" type="button">Add to cart</button>
     `;
 
-    var button = qs('#addToCartButton');
-    button.addEventListener('click', function() {
+    var button = qs("#addToCartButton");
+    button.addEventListener("click", function() {
         addToCart(product);
-        alert('Product added to cart!');
+        alert("Product added to cart!");
     });
 }
 
@@ -57,8 +57,8 @@ async function init() {
     var productId = getProductId();
 
     if (productId === null) {
-        setText(error, "No product selected.");
-        showElement(error);
+        setText(errorMessage, "No product selected.");
+        showElement(errorMessage);
         return;
     }
 
@@ -66,7 +66,8 @@ async function init() {
     showElement(loader);
 
     try {
-        var json = await fetchJson(BASE_URL + "/square-eyes/" + productId);
+        var url = BASE_URL + "/square-eyes/" + encodeURIComponent(productId);
+        var json = await fetchJson(url);
         var product = json.data;
 
         renderProduct(product);

@@ -1,13 +1,13 @@
-import { fetchJson } from '..api/client.js';
-import { qs, show, hide, setText } from '..utils/dom.js';
-import { formatDate } from '..utils/format.js';
+import { fetchJson } from "..api/client.js";
+import { qs, showElement, hideElement, setText } from "..utils/dom.js";
+import { formatPrice } from "..utils/format.js";
 
 var BASE_URL = 'https://v2.api.noroff.dev';
 
-var grid = qs('#productGrid');
+var productGrid = qs('#productGrid');
 var loader = qs('#loader');
-var error = qs('#error');
-var filter = qs('#genreFilter');
+var errorMessage = qs('#error');
+var genreFilter = qs('#genreFilter');
 
 // Store all products in memory to avoid refetching when filtering
 var allProducts = [];
@@ -32,16 +32,16 @@ function renderProducts(products) {
 
     var card = document.createElement('a');
     card.className = 'product-card';
-    card.href = `product/index.html?id=${encodeURIComponent(product.id)}`;
+    card.href = "product/index.html?id=" + encodeURIComponent(product.id);
   
     var imageUrl = "";
-    var imageAlt = "product.title";
+    var imageAlt = product.title;
 
     if (product.image && product.image.url) {
         imageUrl = product.image.url;
     }
 
-    if (product.image && product.immage.alt) {
+    if (product.image && product.image.alt) {
         imageAlt = product.image.alt;
     }
 
@@ -70,13 +70,14 @@ function populateGenreFilter(products) {
         var option = document.createElement('option');
         option.value = genreName;
         option.textContent = genreName;
-        filter.appendChild(option);
+        
+        genreFilter.appendChild(option);
     }
 }
 
 //Filter products based on selected genre
 function filterProducts() {
-    var selectedGenre = populateGenreFilter.value;
+    var selectedGenre = genreFilter.value;
 
     if (selectedGenre === 'all') {
         renderProducts(allProducts);
@@ -113,3 +114,5 @@ async function init() {
         hideElement(loader);
     }       
 }
+
+init();

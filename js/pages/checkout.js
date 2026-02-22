@@ -71,6 +71,7 @@ function calculateTotal(cart) {
 
         var total = calculateTotal(cart);
         setText(totalPriceElement, formatPrice(total));
+    }
 
         //Remove button handling
         cartItemsContainer.addEventListener("click", function(event) {
@@ -82,7 +83,6 @@ function calculateTotal(cart) {
                 renderCart();
             }
         });
-    }
 
 checkoutButton.addEventListener("click", function() {
     clearCart();

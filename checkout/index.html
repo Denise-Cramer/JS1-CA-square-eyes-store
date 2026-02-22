@@ -5,16 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css"> 
     <title>Checkout</title>
-    <a href="../index.html">Back to home</a>
     </head>
 
 <body>
-    <h1>Checkout</h1>
+
+    <header>
+        <h1><a href="../index.html" class="logo">SQUARE EYES</a></h1> 
+    </header>
+
+    <main>
+    <h2>Checkout</h2>
+
+    <div id="loader" hidden>
+        <p>Loading...</p>
+    </div>
 
     <p id="emptyMessage" hidden> Your cart is empty.</p>
     <div id="cartItems"></div>
     <p><strong>Total:</strong> <span id="totalPrice">$0.00</span></p>
     <button id="checkoutButton" type="button">Checkout</button>
+
+    <p><a href="../index.html">Back to home</a></p>
+        </main>
 
     <script type="module" src="../js/pages/checkout.js"></script>
 </body>

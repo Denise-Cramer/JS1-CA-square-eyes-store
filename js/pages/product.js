@@ -45,6 +45,7 @@ function renderProduct(product) {
     <p><strong>Price:</strong> ${formatPrice(priceToUse)}</p>
 
     <button id="addToCartButton" type="button">Add to cart</button>
+    </div>
     `;
 
     var button = qs("#addToCartButton");

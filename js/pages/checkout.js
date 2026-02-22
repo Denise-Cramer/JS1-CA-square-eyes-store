@@ -62,7 +62,7 @@ function calculateTotal(cart) {
             <img src="${imageUrl}" alt="${imageAlt}" style="max-width:120px;">
             <h2>${product.title}</h2>
             <p>${formatPrice(priceToUse)}</p>
-            <button type="button" data-index="${i}">Remove</button>
+            <button type="button" data-index="${i}" class="remove-button">Remove</button>
             <hr>
             `;
 

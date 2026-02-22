@@ -32,7 +32,7 @@ function renderProducts(products) {
 
     var card = document.createElement('a');
     card.className = 'product-card';
-    card.href = "product/index.html?id=" + encodeURIComponent(product.id);
+    card.href = "./product/index.html?id=" + encodeURIComponent(product.id);
   
     var imageUrl = "";
     var imageAlt = product.title;

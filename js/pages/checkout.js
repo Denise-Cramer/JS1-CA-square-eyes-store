@@ -86,7 +86,7 @@ function calculateTotal(cart) {
 
 checkoutButton.addEventListener("click", function() {
     clearCart();
-    window.location.href = "/checkout/confirmation/index.html";
+    window.location.href = "./confirmation/index.html";
 });
 
 //init

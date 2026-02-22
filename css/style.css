@@ -25,3 +25,35 @@ button {
     cursor:pointer;
     padding: 8px 12px;
 }
+
+/* Product details page */
+#productContainer {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* product image */
+#productContainer img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Product info */
+.product-info {
+    flex: 1;
+}
+.product-info h2 {
+    margin-bottom: 10px;
+}
+.product-info p {
+    margin: 6px 0;
+}

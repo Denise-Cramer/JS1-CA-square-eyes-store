@@ -35,6 +35,8 @@ function renderProduct(product) {
 
     container.innerHTML = `
     <img src="${imageUrl}" alt="${imageAlt}">
+
+    <div class="product-info">
     <h2>${product.title}</h2>
     <p>${product.description}</p>
     <p><strong>Genre:</strong> ${product.genre}</p>

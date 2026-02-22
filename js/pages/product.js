@@ -18,7 +18,7 @@ function getProductId() {
 //Render product details on the page
 function renderProduct(product) {
     var imageUrl = "";
-    var imageAlt = "product.title";
+    var imageAlt = product.title;
 
     if (product.image && product.image.url) {
         imageUrl = product.image.url;

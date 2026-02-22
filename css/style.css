@@ -50,7 +50,7 @@ button {
 
 /* Product info */
 .product-info {
-    min-width: none;
+    min-width: 0;
 }
 
 .product-info h2 {

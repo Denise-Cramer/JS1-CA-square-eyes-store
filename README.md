@@ -1,22 +1,35 @@
-# js-ca-square-eyes-store
-Course assignment for JS1.
+# Square Eyes
 
-Description
+## Description
 
-This project is an online store that has been built by using JavaScript, HTML, and CSS. The products and product details are retrieved dynamically from the Square Eyes API.
+Square Eyes is an online movie store built as a part of the JavaScript 1 Course Assignment. This project has been built by using JavaScript, HTML, and CSS. The products and product details are retrieved dynamically from the Square Eyes API.
 
-Users can:
-View products
-Filter products by genre
-View the product details
-Add items to their cart
-Remove items from their cart
-Complete the checkout flow
+## Built with:
 
-Technologies used
+- HTML
+- CSS
+- JavaScript
+- Noroff Square Eyes API
+- LocalStorage
 
-HTML
-CSS
-JavaScript
-Noroff Square Eyes API
-LocalStorage
+## Features:
+
+- Dynamic product listings
+- Product detail pages
+- Shopping cart functionality
+- API integration
+- Responsive design
+
+## Live demo:
+
+[Square Eyes]
+
+## Repository:
+
+[GitHub]
+
+## Author:
+
+Denise Cramer
+
+

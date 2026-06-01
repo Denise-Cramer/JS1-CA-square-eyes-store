@@ -22,11 +22,11 @@ Square Eyes is an online movie store built as a part of the JavaScript 1 Course 
 
 ## Live demo:
 
-[Square Eyes]
+[Square Eyes](https://denise-cramer.github.io/JS1-CA-square-eyes-store/)
 
 ## Repository:
 
-[GitHub]
+[GitHub](https://github.com/Denise-Cramer/JS1-CA-square-eyes-store)
 
 ## Author:
 
